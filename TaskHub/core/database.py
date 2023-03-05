@@ -5,10 +5,8 @@ import os.path
 import pprint
 import sys
 
-try:
-    import shotgun_api3
-except:
-    pass
+import shotgun_api3
+
 from .. import config
 
 
@@ -236,17 +234,4 @@ class SGDB:
 
 
 if __name__ == "__main__":
-    sgurl = "https://pjsh.shotgrid.autodesk.com/"
-    login = "tao.yang@mihoyo.com"
-    password = "MHY@yang"
-
-    sgdb = SGDB()
-    rslt = sgdb.login(sgurl, login, password, "tao.yang@mihoyo.com")
-    data = sgdb.get_publish_data(6685)
-    print(data)
-    # print(sgdb.get_proejcts())
-
-    # filters = [["id", "is", 352]]
-    # fields = ["login"]
-    # rslt = sg.find_one("HumanUser", filters, fields)
-    # print(rslt)
+    pass

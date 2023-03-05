@@ -228,29 +228,4 @@ class Name():
             return self.assembly_definition_shot()
 
 if __name__ == "__main__":
-    # b = Base()
-    # b.version = 3
-    # print(b.version)
-    sgurl = "https://pjsh.shotgrid.autodesk.com/"
-    login = "tao.yang@mihoyo.com"
-    password = "MHY@yang"
-
-    import shotgun_api3
-
-    sg = shotgun_api3.Shotgun(sgurl,
-                              login=login,
-                              password=password)
-    import database
-
-    db = database.SGDB()
-    db.sg = sg
-
-    name_data_map = db.get_publish_data(6685)
-    print(name_data_map)
-    name = Name()
-    name.set_map(name_data_map)
-    name.ext = ".ma"
-    name.root = "x:/projects"
-    print(name.work_path())
-
-    # print(SGGetName.mro())
+    pass
